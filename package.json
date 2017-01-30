@@ -1,6 +1,6 @@
 {
   "name": "@alphaui/json-pkg-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Intelligently merge `package.json` files.",
   "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
   "contributor": "Erica Brown <ericabr@us.ibm.com",
