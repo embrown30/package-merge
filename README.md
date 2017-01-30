@@ -2,7 +2,7 @@
 
 Intelligently merge `package.json` files.
 
-This is pretty much built for yeoman. It attempts to combine two separate `package.json` files into one, respecting as much existing content as possible including already existing dependencies and `package.json` formatting.
+It attempts to combine two separate `package.json` files into one, respecting as much existing content as possible including already existing dependencies and `package.json` formatting.
 
 ```javascript
 var merge = require('@alphaui/json-pkg-merge');
@@ -58,3 +58,7 @@ results in:
 	}
 }
 ```
+# Contributions
+Forked from repo https://github.com/izaakschroeder/package-merge
+
+Updates made by Erica Brown <ericabr@us.ibm.com> for use in build scripts.

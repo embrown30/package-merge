@@ -3,8 +3,18 @@
   "version": "1.0.1",
   "description": "Intelligently merge `package.json` files.",
   "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
-  "contributor": "Erica Brown <ericabr@us.ibm.com",
+  "contributors": [
+		{
+			"name": "Erica Brown",
+			"email": "ericabr@us.ibm.com"
+		}
+		],
   "main": "lib/merge.js",
+	"repository" :
+  {
+		"type" : "git",
+	  "url" : "https://github.com/embrown30/package-merge"
+	},
   "scripts": {
     "test": "./node_modules/.bin/_mocha -R spec test/spec"
   },
