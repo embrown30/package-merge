@@ -5,9 +5,7 @@ var merge = require('../../lib/merge');
 var expect = require('chai').expect;
 
 function fixture(name) {
-	return fs.readFileSync(path.join(
-		__dirname, '..', 'fixtures', name+'.fixture.json'
-	), 'utf8');
+	return require(path.resolve(__dirname, '..','fixtures', name+'.fixture.json'));
 }
 
 describe('#merge', function() {
@@ -36,7 +34,16 @@ describe('#merge', function() {
 			fixture('complete'),
 			fixture('dependencies')
 		));
-
 		expect(result.dependencies).to.have.property('express', '^5.0.0');
+	});
+
+	it('should not merge scripts', function() {
+		var result = JSON.parse(merge(
+			fixture('complete'),
+			fixture('dependencies'),
+			['scripts', 'name']
+		));
+		expect(result.scripts.package).to.be.undefined
+		expect(result.name).to.be.equal('module-name');
 	});
 });
